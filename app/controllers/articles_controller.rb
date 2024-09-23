@@ -18,7 +18,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.break
     @article = Article.new(article_whitelist)
     @article.user = current_user
     if @article.save
